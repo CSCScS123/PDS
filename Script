@@ -1,0 +1,54 @@
+create table mahasiswa(id_nilai varchar(4),nis varchar(5),kd_mtplj varchar(7),value INT(2));
+
+
+insert into mahasiswa
+values ('N001','p0101','kmpa001','75'),
+('N002','p0101','kmpa002','80'),
+('N003','p0101','kmpa003','70'),
+('N004','p0101','kmpa004','75'),
+('N005','p0101','kmpa005','85'),
+('N006','p0102','kmpa001','90'),
+('N007','p0102','kmpa002','85'),
+('N008','p0102','kmpa003','75'),
+('N009','p0102','kmpa004','70'),
+('N010','p0102','kmpa005','80'),
+('N011','p0103','kmpa001','60'),
+('N012','p0103','kmpa002','75'),
+('N013','p0103','kmpa003','70'),
+('N014','p0103','kmpa004','90'),
+('N015','p0103','kmpa005','70'),
+('N016','p0104','kmpa001','80'),
+('N017','p0104','kmpa002','90'),
+('N018','p0104','kmpa003','85'),
+('N019','p0104','kmpa004','80'),
+('N020','p0104','kmpa005','90'),
+('N021','p0105','kmpa001','60'),
+('N022','p0105','kmpa002','65'),
+('N023','p0105','kmpa003','65'),
+('N024','p0105','kmpa004','60'),
+('N025','p0105','kmpa005','60'),
+('N026','p0106','kmpa001','90'),
+('N027','p0106','kmpa002','95'),
+('N028','p0106','kmpa003','95'),
+('N029','p0106','kmpa004','90'),
+('N030','p0106','kmpa005','90');
+
+create view nilai_70 as select*from mahasiswa where value=70;
+
+select*from nilai_70;
+
+create view nilai_diatas80 as select*from mahasiswa where value>80;
+
+select*from nilai_diatas80;
+
+create view nilai_dibawah75 as select*from mahasiswa where value<75;
+
+select*from nilai_dibawah75;
+
+create view nilai_diatas90 as select*from mahasiswa where value>90;
+
+select*from nilai_diatas90;
+
+create view nilai_80 as select*from mahasiswa where value=80;
+
+select*from nilai_80;
